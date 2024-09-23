@@ -34,12 +34,15 @@ public class MainActivity extends AppCompatActivity {
          * Set the preferred language at runtime using the Locale class and the Configuration class.
          * Use Locale.getDefault() method to get the user's default language.
          */
+
+        //Get & print default language.
         Locale defaultLocale = Locale.getDefault();
         String country = defaultLocale.getCountry();
         String dispCountry = defaultLocale.getDisplayCountry();
-        String default_locale = String.format(getResources().getString(R.string.default_locale), country, dispCountry);
+        String default_locale = String.format(getResources().getString(R.string.default_locale), country, dispCountry); //Two format specifier arguments provided because we use the format specifer %s twice in the same string.
         tvDefaultLocale.setText(default_locale);
 
+        //Change default language.
         Locale locale = new Locale("jp"); //use "jp" for japanese and "es" for spanish and "en" to use the default language strings.xml.
         //Locale locale = Locale.getDefault(); //Alternatively, to set the default language as preferred instead of using "en". (Will use original strings.xml)
         Configuration config = new Configuration();
