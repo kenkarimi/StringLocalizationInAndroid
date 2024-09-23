@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         /**
          * To include localizations for different languages, you'll need to create different language-specific directories e.g. res/values-en and res/values-es.
          * Within each will be a strings.xml file where you'll define the strings you want to localize using the same resource names as in your default strings.xml located in the res/values directory.
+         * To create these directories, right click on the strings directory, go to New>Values Resource File>Name the file strings.xml>Change the directory name from 'values' to 'values-es'>Click "OK".
          * These directories should follow the ISO 639-1 language codes. Translate the strings.
          * Set the preferred language at runtime using the Locale class and the Configuration class.
          * Use Locale.getDefault() method to get the user's default language.
