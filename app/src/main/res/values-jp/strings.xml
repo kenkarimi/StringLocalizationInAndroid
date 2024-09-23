@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StringLocalizationInAndroid (JP)</string>
+    <string name="default_locale">"Country Code: %s\nCountry Name: %s</string>
+    <string name="customer_name">Customer Name: %s (JP)</string> <!--Format specifier for strings -->
+    <string name="stock">Items: %d (JP)</string> <!--Format specifier for integers longs-->
+    <string name="price">KES. %f (JP)</string> <!--Format specifier for floats and doubles-->
+    <plurals name="songs"> <!--String pluralization using the @plurals resource.-->
+        <item quantity="one">You have %d song. (JP)</item>
+        <item quantity="other">You have %d songs. (JP)</item>
+    </plurals>
+</resources>

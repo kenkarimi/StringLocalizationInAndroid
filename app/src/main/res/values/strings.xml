@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">StringLocalizationInAndroid</string>
+    <string name="default_locale">"Country Code: %s\nCountry Name: %s</string>
     <string name="customer_name">Customer Name: %s</string> <!--Format specifier for strings -->
-    <string name="stock">Items: %d</string> <!--Format specifier for integers longs -->
-    <string name="price">KES. %f</string> <!--Format specifier for floats and doubles -->
+    <string name="stock">Items: %d</string> <!--Format specifier for integers longs-->
+    <string name="price">KES. %f</string> <!--Format specifier for floats and doubles-->
+    <plurals name="songs"> <!--String pluralization using the @plurals resource.-->
+        <item quantity="one">You have %d song.</item>
+        <item quantity="other">You have %d songs.</item>
+    </plurals>
 </resources>
