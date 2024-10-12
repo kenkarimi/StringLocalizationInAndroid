@@ -8,11 +8,17 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
     TextView tvDefaultLocale, tvCustomerName, tvStock, tvPrice, tvSongs;
+    //What to do when you can't use an enum because you expect a value to saved in the database so it needs to stay a string/int etc., while at the same time offering you the benefits of having it typed for several string options.
+    private String gender = Gender.DEFAULT; //Problem with this method is I can still assign any string to this gender variable because its type is String.
+    private OrderStatus order_status = OrderStatus.DEFAULT;
+    private String o = "Accepted";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
