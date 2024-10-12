@@ -3,6 +3,7 @@ package com.example.stringlocalizationinandroid;
 import android.content.res.Configuration;
 import android.icu.text.PluralRules;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tvDefaultLocale, tvCustomerName, tvStock, tvPrice, tvSongs;
     //What to do when you can't use an enum because you expect a value to saved in the database so it needs to stay a string/int etc., while at the same time offering you the benefits of having it typed for several string options.
     private String gender = Gender.DEFAULT; //Problem with this method is I can still assign any string to this gender variable because its type is String.
-    private OrderStatus order_status = OrderStatus.DEFAULT;
+    private OrderStatus order_status = OrderStatus.DEFAULT; //instead of having to do order_status = new OrderStatus("") we've created static final variables assigned to = new OrderStatus("")
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,6 +32,25 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setTitle("MainActivity");
+
+        /**
+         * Can't compare order_status directly to primitive data type values("", "Complete", "Incomplete") because the variable order_status is an instance of the OrderStatus class(new OrderStatus("")).
+         * order_status comparisons have to be made against the static final variables that are themselves instances of the OrderStatus class.
+         * This also means that you can't send the order_status variable to be saved to your database as its not a string.
+         * To get the string value, do: String this_string = order_status.getValue() which is essentially String this_string = new OrderStatus("").getValue();
+         */
+        if(order_status.equals(OrderStatus.DEFAULT)) { //You alternatively compare to OrderStatus.DEFAULT
+            Log.d("OrderStatus", String.valueOf(order_status)); //conversion doesn't work.
+            Log.d("OrderStatus", order_status.getValue()); //Will be empty in logcat
+        } else if(order_status.equals(OrderStatus.COMPLETE)){ //You alternatively compare to OrderStatus.COMPLETE
+            Log.d("OrderStatus", String.valueOf(order_status)); //conversion doesn't work.
+            Log.d("OrderStatus", order_status.getValue());
+        } else if(order_status.equals(OrderStatus.INCOMPLETE)){ //You alternatively compare to OrderStatus.INCOMPLETE
+            Log.d("OrderStatus", String.valueOf(order_status)); //conversion doesn't work.
+            Log.d("OrderStatus", order_status.getValue());
+        } else {
+            Log.d("OrderStatusFailure", "All comparisons failed...");
+        }
 
         /**
          * To include localizations for different languages, you'll need to create different language-specific directories e.g. res/values-en and res/values-es.
