@@ -15,7 +15,7 @@
         <item quantity="other">[other] %d people.</item>
     </plurals>
     <plurals name="students">
-        <item quantity="one">[one] %1$d %2$s student.</item>
-        <item quantity="other">[other] %1$d %2$s student.</item>
+        <item quantity="one">[one] %1$d%2$s student.</item>
+        <item quantity="other">[other] %1$d%2$s student.</item>
     </plurals>
 </resources>

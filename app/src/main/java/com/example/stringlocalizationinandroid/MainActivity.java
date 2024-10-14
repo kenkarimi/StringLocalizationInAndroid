@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         tvDefaultLocale.setText(default_locale);
 
         //Change default language.
-        Locale locale = new Locale("es"); //use "jp" for japanese and "es" for spanish and "en" to use the default language strings.xml.
+        Locale locale = new Locale("en"); //use "jp" for japanese and "es" for spanish and "en" to use the default language strings.xml.
         //Locale locale = Locale.getDefault(); //Alternatively, to set the default language as preferred instead of using "en". (Will use original strings.xml)
         Configuration config = new Configuration();
         config.setLocale(locale);
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
          * In Irish: 1 is mapped to one, 2 is mapped to two, 3-6 is few, 7-10 is many, 0 and 11+ is other.
          * More: https://stackoverflow.com/questions/41950952/how-to-use-android-quantity-strings-plurals
          */
-        int persons = 3;
+        int persons = 2;
         String plural_persons = getResources().getQuantityString(R.plurals.persons, persons, persons);
         tvPersons.setText(plural_persons);
 
