@@ -9,4 +9,14 @@
         <item quantity="one">You have %d song. (ES)</item>
         <item quantity="other">You have %d songs. (ES)</item>
     </plurals>
+    <plurals name="persons">
+        <item quantity="zero">[zero] %d people. (ES)</item>
+        <item quantity="one">[one] %d person. (ES)</item>
+        <item quantity="two">[two] %d people. (ES)</item>
+        <item quantity="other">[other] %d people. (ES)</item>
+    </plurals>
+    <plurals name="students">
+        <item quantity="one">[one] %1$d %2$s student. (ES)</item>
+        <item quantity="other">[other] %1$d %2$s student. (ES)</item>
+    </plurals>
 </resources>

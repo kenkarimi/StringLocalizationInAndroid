@@ -50,5 +50,23 @@
         android:text=""
         android:textColor="@color/black"
         android:id="@+id/tvSongs"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:text=""
+        android:textColor="@color/black"
+        android:id="@+id/tvPersons"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:text=""
+        android:textColor="@color/black"
+        android:id="@+id/tvStudents"/>
 
 </LinearLayout>

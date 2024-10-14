@@ -9,4 +9,14 @@
         <item quantity="one">You have %d song. (JP)</item>
         <item quantity="other">You have %d songs. (JP)</item>
     </plurals>
+    <plurals name="persons">
+        <item quantity="zero">[zero] %d people. (JP)</item>
+        <item quantity="one">[one] %d person. (JP)</item>
+        <item quantity="two">[two] %d people. (JP)</item>
+        <item quantity="other">[other] %d people. (JP)</item>
+    </plurals>
+    <plurals name="students">
+        <item quantity="one">[one] %1$d %2$s student. (JP)</item>
+        <item quantity="other">[other] %1$d %2$s student. (JP)</item>
+    </plurals>
 </resources>
