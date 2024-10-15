@@ -68,5 +68,15 @@
         android:text=""
         android:textColor="@color/black"
         android:id="@+id/tvStudents"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:background="@color/colorRed"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:id="@+id/button"/>
 
 </LinearLayout>

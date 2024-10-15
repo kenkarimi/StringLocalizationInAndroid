@@ -4,6 +4,7 @@ import android.content.res.Configuration;
 import android.icu.text.PluralRules;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -16,6 +17,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     TextView tvDefaultLocale, tvCustomerName, tvStock, tvPrice, tvSongs, tvPersons, tvStudents;
+    Button button;
     //What to do when you can't use an enum because you expect a value to saved in the database so it needs to stay a string/int etc., while at the same time offering you the benefits of having it typed for several string options.
     private String gender = Gender.DEFAULT; //Problem with this method is I can still assign any string to this gender variable because its type is String.
     private OrderStatus order_status = OrderStatus.DEFAULT; //instead of having to do order_status = new OrderStatus("") we've created static final variables assigned to = new OrderStatus("")
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         tvSongs = (TextView) findViewById(R.id.tvSongs);
         tvPersons = (TextView) findViewById(R.id.tvPersons);
         tvStudents = (TextView) findViewById(R.id.tvStudents);
+        button = (Button) findViewById(R.id.button);
 
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setTitle("MainActivity");
@@ -114,7 +117,12 @@ public class MainActivity extends AppCompatActivity {
         //Also note: format specifier positioning is indicated with a number & dolar sign in between the format specifier. e.g. %2$d.
         int students = 2;
         String superscript = students == 1 ? "st" : students == 2 ? "nd" : students == 3 ? "rd" : "th";
-        String plural_students = getResources().getQuantityString(R.plurals.students, students, students, superscript);//Two format specifier arguments provided because we use the format specifier %d and %s in the same string.
+        String plural_students = getResources().getQuantityString(R.plurals.students, students, students, superscript); //Two format specifier arguments provided because we use the format specifier %d and %s in the same string.
         tvStudents.setText(plural_students);
+
+        int num = 1;
+        String serialized_num = num == 1 ? "" : ""+ num;
+        String btn_text = String.format(getResources().getString(R.string.button_text), serialized_num);
+        button.setText(btn_text);
     }
 }

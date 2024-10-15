@@ -18,4 +18,5 @@
         <item quantity="one">[one] %1$d%2$s student.</item>
         <item quantity="other">[other] %1$d%2$s student.</item>
     </plurals>
+    <string name="button_text">Button %s</string>
 </resources>
